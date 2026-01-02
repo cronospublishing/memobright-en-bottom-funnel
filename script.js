@@ -88,18 +88,40 @@ function getOrdinal(day) {
   }
 }
 
-const now = new Date();
+// Ultimos 3 dias no Header
+function getLastDays(count) {
+  const dates = [];
 
-// último dia do mês atual
-const lastDay = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+  for (let i = count - 1; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    dates.push(d);
+  }
 
-const days = [
-  getOrdinal(lastDay),
-  getOrdinal(lastDay - 1),
-  getOrdinal(lastDay - 2),
-];
+  return dates;
+}
+
+function getOrdinal(n) {
+  if (n > 3 && n < 21) return `${n}th`;
+  switch (n % 10) {
+    case 1:
+      return `${n}st`;
+    case 2:
+      return `${n}nd`;
+    case 3:
+      return `${n}rd`;
+    default:
+      return `${n}th`;
+  }
+}
+
+const last3Days = getLastDays(3);
+
+const monthName = last3Days[0].toLocaleString("en-US", { month: "long" });
+
+const daysFormatted = last3Days.map((d) => getOrdinal(d.getDate()));
 
 document.getElementById("discountText").innerHTML = `
-      <span>🎉 60% Discount</span> Available only on December
-      ${days[2]}, ${days[1]} and ${days[0]}.
-    `;
+  <span>🎉 60% Discount</span> Available only on ${monthName}
+  ${daysFormatted[0]}, ${daysFormatted[1]} and ${daysFormatted[2]}.
+`;
