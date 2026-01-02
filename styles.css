@@ -315,7 +315,7 @@ a {
 
 /* Botões */
 .pricing-cards .buy-btn {
-  width: 90%;
+  /* width: 90%; */
   padding: 16px;
   border: 0;
   border-radius: 8px;
