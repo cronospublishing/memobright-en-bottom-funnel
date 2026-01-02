@@ -153,21 +153,25 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin: 40px 0;
-  font-family: 'Poppins', sans-serif; /* Garante a fonte correta nesta seção */
+  font-family: "Poppins", sans-serif; /* Garante a fonte correta nesta seção */
 }
 
 /* Seletores compostos para evitar conflito com .product-card ou outros cards */
 .pricing-cards .pricing-card {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   background: #fff;
   transition: transform 0.3s;
 }
 
-.pricing-cards .card-basic { border: 3px solid #5b8dc9; }
+.pricing-cards .card-basic {
+  border: 3px solid #5b8dc9;
+}
 
-.pricing-cards .card-popular { border: 3px solid #5b8dc9; }
+.pricing-cards .card-popular {
+  border: 3px solid #5b8dc9;
+}
 
 /* Resolvendo o conflito do .card-best */
 .pricing-cards .pricing-card.card-best {
@@ -183,13 +187,23 @@ a {
   text-align: center;
   font-weight: 700;
   font-size: 1.1rem;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   display: block; /* Garante comportamento de bloco */
 }
 
-.pricing-cards .header-basic { background: #5b8dc9; color: #fff; }
-.pricing-cards .header-best { background: #1e3a5f; color: #ffd700; font-size: 1.3rem; }
-.pricing-cards .header-popular { background: #5b8dc9; color: #fff; }
+.pricing-cards .header-basic {
+  background: #5b8dc9;
+  color: #fff;
+}
+.pricing-cards .header-best {
+  background: #1e3a5f;
+  color: #ffd700;
+  font-size: 1.3rem;
+}
+.pricing-cards .header-popular {
+  background: #5b8dc9;
+  color: #fff;
+}
 
 .pricing-cards .card-content {
   padding: 20px;
@@ -209,7 +223,7 @@ a {
 }
 
 .pricing-cards .supply {
-  font-size: .95rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--pricing-ink);
   margin: 0 0 20px;
@@ -231,9 +245,25 @@ a {
   gap: 5px;
 }
 
-.pricing-cards .price-dollar { font-size: 2rem; font-weight: 700; color: var(--pricing-ink); }
-.pricing-cards .price-value { font-size: 4.5rem; font-weight: 900; line-height: .9; color: var(--pricing-ink); }
-.pricing-cards .price-label { font-size: .85rem; font-weight: 700; color: var(--pricing-ink); text-align: left; line-height: 1.1; margin-top: 8px; }
+.pricing-cards .price-dollar {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--pricing-ink);
+}
+.pricing-cards .price-value {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 0.9;
+  color: var(--pricing-ink);
+}
+.pricing-cards .price-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--pricing-ink);
+  text-align: left;
+  line-height: 1.1;
+  margin-top: 8px;
+}
 
 .pricing-cards .card-best .price-dollar,
 .pricing-cards .card-best .price-value,
@@ -244,7 +274,7 @@ a {
 /* Lista de Benefícios */
 .pricing-cards .benefit {
   padding: 8px 0;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-align: center;
   border-bottom: 2px dotted #ddd;
@@ -253,22 +283,35 @@ a {
 
 .pricing-cards .card-best .benefit {
   color: #fff;
-  border-bottom-color: rgba(255, 255, 255, .3);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
 }
 
 .pricing-cards .benefit span {
   display: inline-block;
-  width: 20px; height: 20px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   text-align: center;
   line-height: 20px;
   margin-right: 8px;
 }
 
-.pricing-cards .blue-check span { background: #3b7dd6; color: #fff; }
-.pricing-cards .black-check span { background: #1a1a1a; color: #fff; }
-.pricing-cards .yellow-check span { background: #ffd700; color: #1a1a1a; }
-.pricing-cards .white-check span { background: #fff; color: #1a1a1a; }
+.pricing-cards .blue-check span {
+  background: #3b7dd6;
+  color: #fff;
+}
+.pricing-cards .black-check span {
+  background: #1a1a1a;
+  color: #fff;
+}
+.pricing-cards .yellow-check span {
+  background: #ffd700;
+  color: #1a1a1a;
+}
+.pricing-cards .white-check span {
+  background: #fff;
+  color: #1a1a1a;
+}
 
 /* Botões */
 .pricing-cards .buy-btn {
@@ -285,26 +328,58 @@ a {
   text-decoration: none;
 }
 
-.pricing-cards .btn-gray { background: #d9d9d9; color: #1a1a1a; }
-.pricing-cards .btn-yellow { background: #ffd700; color: #1a1a1a; }
+.pricing-cards .btn-gray {
+  background: #d9d9d9;
+  color: #1a1a1a;
+}
+.pricing-cards .btn-yellow {
+  background: #ffd700;
+  color: #1a1a1a;
+}
 
 /* Rodapé do Card */
-.pricing-cards .total-price { font-size: 1rem; font-weight: 700; color: var(--pricing-ink); margin-top: 15px; }
-.pricing-cards .card-best .total-price { color: #fff; }
-.pricing-cards .final-price { font-weight: 900; }
-.pricing-cards .card-best .final-price { color: #ffd700; }
-.pricing-cards .old-price { text-decoration: line-through; color: #999; }
-.pricing-cards .card-best .old-price { color: rgba(255,255,255,.6); }
-.pricing-cards .shipping.free { color: #ffd700; font-weight: 900; }
+.pricing-cards .total-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--pricing-ink);
+  margin-top: 15px;
+}
+.pricing-cards .card-best .total-price {
+  color: #fff;
+}
+.pricing-cards .final-price {
+  font-weight: 900;
+}
+.pricing-cards .card-best .final-price {
+  color: #ffd700;
+}
+.pricing-cards .old-price {
+  text-decoration: line-through;
+  color: #999;
+}
+.pricing-cards .card-best .old-price {
+  color: rgba(255, 255, 255, 0.6);
+}
+.pricing-cards .shipping.free {
+  color: #ffd700;
+  font-weight: 900;
+}
 
 /* RESPONSIVO MOBILE - Mantendo isolado */
 @media (max-width: 900px) {
   .pricing-cards {
     grid-template-columns: 1fr;
   }
-  .pricing-cards .card-best { order: 1; transform: scale(1); }
-  .pricing-cards .card-popular { order: 2; }
-  .pricing-cards .card-basic { order: 3; }
+  .pricing-cards .card-best {
+    order: 1;
+    transform: scale(1);
+  }
+  .pricing-cards .card-popular {
+    order: 2;
+  }
+  .pricing-cards .card-basic {
+    order: 3;
+  }
 
   .pricing-cards .card-content {
     display: grid;
@@ -312,14 +387,45 @@ a {
     gap: 0 15px;
     text-align: left;
   }
-  .pricing-cards .card-content h3 { grid-column: 2; grid-row: 1; font-size: 1.3rem; margin: 0; }
-  .pricing-cards .supply { grid-column: 2; grid-row: 2; font-size: .8rem; }
-  .pricing-cards .card-content img { grid-column: 1; grid-row: 1 / 4; width: 100%; margin: 0; }
-  .pricing-cards .price-box { grid-column: 2; grid-row: 3; justify-content: flex-start; margin: 10px 0; }
-  .pricing-cards .price-value { font-size: 3.5rem; }
-  .pricing-cards .benefits-list { grid-column: 1 / 3; grid-row: 4; }
-  .pricing-cards .total-price { grid-column: 1 / 3; grid-row: 5; }
-  .pricing-cards .buy-btn { grid-column: 1 / 3; grid-row: 6; width: 100%; }
+  .pricing-cards .card-content h3 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .pricing-cards .supply {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 0.8rem;
+  }
+  .pricing-cards .card-content img {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    width: 100%;
+    margin: 0;
+  }
+  .pricing-cards .price-box {
+    grid-column: 2;
+    grid-row: 3;
+    justify-content: flex-start;
+    margin: 10px 0;
+  }
+  .pricing-cards .price-value {
+    font-size: 3.5rem;
+  }
+  .pricing-cards .benefits-list {
+    grid-column: 1 / 3;
+    grid-row: 4;
+  }
+  .pricing-cards .total-price {
+    grid-column: 1 / 3;
+    grid-row: 5;
+  }
+  .pricing-cards .buy-btn {
+    grid-column: 1 / 3;
+    grid-row: 6;
+    width: 100%;
+  }
 }
 
 /* Discover Section */
@@ -550,16 +656,16 @@ a {
   border-radius: 50%;
   text-align: center;
   line-height: 1.2;
-  width: 60px;
-  height: 60px;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .free-badge.small-badge {
-  width: 55px;
-  height: 55px;
+  width: 72px;
+  height: 72px;
   font-size: 9px;
 }
 
